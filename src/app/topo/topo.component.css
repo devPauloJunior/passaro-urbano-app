@@ -1,0 +1,11 @@
+.menu { background-color: #006acb; }
+
+.nav-link { color: #c1e4ff; }
+
+.nav-link:hover { color: white; }
+
+.banner { margin-top: 130px; }
+
+.banner img { width: 100%; height: 230px; }
+
+.active { color: white; }
