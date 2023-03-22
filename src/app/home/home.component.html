@@ -5,37 +5,13 @@
     </section>
     <hr>
     <section class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4" *ngFor=" let oferta of ofertas ">
             <div class="card">
-                <img class="card-img-top" src="../../assets/ofertas/1/img1.jpg" alt="">
+                <img class="card-img-top" [src]=" oferta.imagens[0].url " alt="">
                 <div class="card-block m-4">
-                    <h4 class="card-title">Super Burger</h4>
-                    <p class="card-text">Rodízio de Mini-Hambúrger com opção de entrada</p>
-                    <p class="preco">R$ 29,90</p>
-                    <a class="btn btn-outline-primary" href="#">Ver Oferta</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="card">
-                <img class="card-img-top" src="../../assets/ofertas/2/img1.jpg" alt="">
-                <div class="card-block m-4">
-                    <h4 class="card-title">Cozinha Mexicana</h4>
-                    <p class="card-text">Almoço e Janta com Rodízio Mexiacano. Deliciso!</p>
-                    <p class="preco">R$ 42,90</p>
-                    <a class="btn btn-outline-primary" href="#">Ver Oferta</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="card">
-                <img class="card-img-top" src="../../assets/ofertas/4/img1.jpg" alt="">
-                <div class="card-block m-4">
-                    <h4 class="card-title">Estância das águas</h4>
-                    <p class="card-text">Diversão garantida com piscinas, trilhas e muito mais...</p>
-                    <p class="preco">R$ 99,90</p>
+                    <h4 class="card-title">{{ oferta.titulo }}</h4>
+                    <p class="card-text">{{ oferta.descricao_oferta }}</p>
+                    <p class="preco">R$ {{ oferta.valor }}</p>
                     <a class="btn btn-outline-primary" href="#">Ver Oferta</a>
                 </div>
             </div>
