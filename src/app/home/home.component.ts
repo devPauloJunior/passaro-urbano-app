@@ -1,26 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { OfertaService } from '../ofetas.service';
+import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [ OfertaService ]
+  providers: [ OfertasService ]
 })
 export class HomeComponent implements OnInit {
 
-  public ofertas: Oferta[] = []
+  public ofertas: Oferta | any
 
-  constructor( private ofertasService: OfertaService ) {}
+  constructor( private ofertasService: OfertasService ) {}
 
-  ngOnInit() {
-    // this.ofertas = this.ofertasService.getOfertas()
-    console.log(this.ofertas)
-    this.ofertasService.getOfertas2()
-    .then(( ofertas: Oferta[]  ) => { 
-      this.ofertas = ofertas })
-    .catch(( param: any) => { 
-      console.log(param) })
+  ngOnInit(): void {
+    this.ofertasService.getOfertas().subscribe({
+      next: (res: any) => this.ofertas = res,
+      error: (error: any) => error
+    })
   }
 }
