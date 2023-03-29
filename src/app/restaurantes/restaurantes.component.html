@@ -1,1 +1,33 @@
-<p>restaurantes works!</p>
+<main class="container">
+    <section class="destaques">
+        <h3 class="text-center">Rodízios, Buffet, Carnes Especiais, Comidas Tipicas e muito mais.</h3>
+        <h5 class="text-center">Aqui temos as melhores ofertas de restaurantes para você!</h5>
+    </section>
+    <hr>
+    <div class="row row-cols-2 m-4" *ngFor=" let oferta of ofertas ">
+        <div class="col-sm-4 mx-0">
+            <img class="img-fluid" [src]=" oferta.imagens[0].url " alt="">
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <h4>{{ oferta.titulo }}</h4>
+            </div>
+            <div class="row">
+                <h5>{{ oferta.descricao_oferta }}</h5>
+            </div>
+
+            <div class="row">
+                <p>Anunciado por: <strong>{{ oferta.anunciante }}</strong></p>
+            </div>
+
+            <div class="row">
+                <p>R${{ oferta.valor }}</p>
+            </div>
+
+            <div class="row">
+                <button class="btn btn-outline-success w-25" [routerLink]="[ '/oferta', oferta.id ]">Ver Oferta</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+</main>

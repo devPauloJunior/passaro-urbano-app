@@ -17,4 +17,14 @@ export class OfertasService {
             return this.http.get<Oferta>(`${this.url}/ofertas?destaque=true`)
             .pipe( res => res )
     }
+
+    public getOfertasPorCategoria( categoria:string ) : Observable<Oferta> {
+        return this.http.get<Oferta>(`${this.url}/ofertas?categoria=${categoria}`)
+        .pipe( res => res )
+    }
+
+    public getOfertasPorId( id: number ) : Observable<Oferta> {
+        return this.http.get<Oferta>(`${this.url}/ofertas?id=${id}`)
+        .pipe( res => res )
+    }
 }

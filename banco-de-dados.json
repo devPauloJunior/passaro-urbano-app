@@ -7,7 +7,7 @@
 			"descricao_oferta": "Rodízio de Mini-hambúrger com opção de entrada.",
 			"anunciante": "Original Burger",
 			"valor": 29.90,
-			"destaque": true,
+			"destaque": false,
 			"imagens": [
 				{"url": "/assets/ofertas/1/img1.jpg"},
 				{"url": "/assets/ofertas/1/img2.jpg"},
@@ -69,7 +69,7 @@
 			"descricao_oferta": "Bateria de Kart de 30 minutos.",
 			"anunciante": "Speed Kart",
 			"valor": 54.90,
-			"destaque": false,
+			"destaque": true,
 			"imagens": [
 				{"url": "/assets/ofertas/5/img1.jpg"},
 				{"url": "/assets/ofertas/5/img2.jpg"}
@@ -82,7 +82,7 @@
 			"descricao_oferta": "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
 			"anunciante": "Academia de Tiro",
 			"valor": 89.90,
-			"destaque": false,
+			"destaque": true,
 			"imagens": [
 				{"url": "/assets/ofertas/6/img1.jpg"},
 				{"url": "/assets/ofertas/6/img2.jpg"}
